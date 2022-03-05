@@ -3,7 +3,7 @@
 assume cs:code
 
 code segment
-start:	mov ah,0
+start:	mov ah,3
 		mov al,1
 		call setscreen
 		
@@ -127,3 +127,6 @@ sub4s1:	mov byte ptr [160*24+si],' '	;最后一行清空
 
 code ends
 end start
+
+;记录：在DOSBox中执行一个EXE文件后，窗口界面会向上滚动两行，
+;	   所以在执行功能4时，看上去是向上滚动了3行。
